@@ -137,3 +137,41 @@ body {
 }
 
 .hidden { display: none !important; }
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas, mas ajusta o gap */
+    gap: 10px;
+  }
+
+  .login-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-title {
+    font-size: 0.8rem;
+  }
+
+  /* Ajuste para o botão de recado não "esmagar" o título no topo */
+  .btn-recado-top {
+    padding: 5px 8px;
+    font-size: 0.6rem;
+  }
+}
+
+/* Para telas muito pequenas (ex: iPhone SE) */
+@media (max-width: 350px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 coluna apenas para não espremer o conteúdo */
+  }
+  
+  .fixed-header {
+    padding: 0 10px;
+  }
+}
+
+/* Garante que o container não fique colado nas bordas */
+.container {
+  width: 100%;
+  box-sizing: border-box;
+}
